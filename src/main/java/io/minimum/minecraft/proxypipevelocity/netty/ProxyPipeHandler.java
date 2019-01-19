@@ -72,6 +72,9 @@ public class ProxyPipeHandler extends ChannelInboundHandlerAdapter {
 
             // Rewrite the handshake so that Velocity is none the wiser.
             HANDSHAKE_ADDRESS_FIELD.set(msg, info.correctHostname);
+
+            // ...and let's leave the building.
+            ctx.pipeline().remove(this);
         } catch (Exception e) {
             logger.error("Unable to handle handshake from {}", ctx.channel().remoteAddress(), e);
             ctx.close();
