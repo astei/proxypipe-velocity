@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'io.minimum'
-version '1.0-SNAPSHOT'
+version '1.0'
 
 sourceCompatibility = 1.8
 
@@ -16,9 +16,9 @@ repositories {
 }
 
 dependencies {
-    compileOnly 'com.velocitypowered:velocity-api:1.0-SNAPSHOT'
-    annotationProcessor 'com.velocitypowered:velocity-api:1.0-SNAPSHOT'
-    compileOnly 'io.netty:netty-handler:4.1.32.Final'
+    compileOnly 'com.velocitypowered:velocity-api:1.0.0-SNAPSHOT'
+    annotationProcessor 'com.velocitypowered:velocity-api:1.0.0-SNAPSHOT'
+    compileOnly 'io.netty:netty-handler:4.1.35.Final'
     compile 'org.bouncycastle:bcprov-jdk15on:1.60'
 }
 

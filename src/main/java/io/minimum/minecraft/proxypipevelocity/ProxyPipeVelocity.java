@@ -21,7 +21,7 @@ import java.nio.file.Path;
         id = "proxypipe",
         name = "ProxyPipe for Velocity",
         authors = {"tuxed", "ProxyPipe"},
-        version = "1.0-SNAPSHOT"
+        version = "1.0"
 )
 public class ProxyPipeVelocity {
     private final ProxyServer server;

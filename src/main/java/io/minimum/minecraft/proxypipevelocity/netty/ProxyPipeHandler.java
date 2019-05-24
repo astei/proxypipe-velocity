@@ -105,7 +105,7 @@ public class ProxyPipeHandler extends ChannelInboundHandlerAdapter {
         long timestamp = Long.parseLong(split[0]);
         long currentTime = System.currentTimeMillis() / 1000;
         if (currentTime - timestamp >= 3600) { // 60 minutes, 1 hour
-            logger.warn("Client {} attempted to connect with old timestamp (%sms)", ctx.channel().remoteAddress(),
+            logger.warn("Client {} attempted to connect with old timestamp ({}ms)", ctx.channel().remoteAddress(),
                     currentTime - timestamp - 3600);
             return null;
         }
